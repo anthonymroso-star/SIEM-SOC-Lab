@@ -19,7 +19,7 @@ The root cause of the incident was identified as an exposed SSH utility service 
 After confirming the automated volume, the team analysed the log data. The logs indicated that the attacker generated a massive vertical spike of hits before dropping the network connection.  
   
 ### Response and remediation  
-The organization successfully intercepted the attack traffic through the local security pipeline. As the automated tool only generated failed login events, no system breach or credential compromise occurred on the asset.  
+The organisation successfully intercepted the attack traffic through the local security pipeline. As the automated tool only generated failed login events, no system breach or credential compromise occurred on the asset.  
   
 After the analyst reviewed the associated alerts, the scope was clear. There was a single log source showing an exceptionally high volume of sequential invalid user queries originating from the specific attacker source IP x.x.x.x  
   
