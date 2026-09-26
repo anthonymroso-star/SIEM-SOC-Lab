@@ -4,7 +4,7 @@
 **Target:** **Server (Ubuntu Host OS)  
   
 ### Executive summary  
-The laboratory environment experienced a simulated security incident on 9 July 2026, at 3:15 a.m. BST, during which an external asset attempted to gain unauthorized access via automated password guessing. No customer data or personally  identifiable information (PII) was exposed or compromised. The financial impact of the incident is £0, as the attack was safely contained within a controlled sandboxed environment. The incident is now closed and a thorough forensic database investigation has been completed.  
+The laboratory environment experienced a simulated security incident on 9 July 2026, at 3:15 a.m. BST, during which an external asset attempted to gain unauthorised access via automated password guessing. No customer data or personally  identifiable information (PII) was exposed or compromised. The financial impact of the incident is £0, as the attack was safely contained within a controlled environment. The incident is now closed and a thorough forensic database investigation has been completed.  
   
 ### Timeline  
 * **03:13 a.m. BST** — Attacker initiated a reconnaissance connection to test network socket responsiveness on port 22. Initial telemetry captured brief connection drops due to aggressive script timeouts.  
@@ -12,11 +12,11 @@ The laboratory environment experienced a simulated security incident on 9 July 2
 * **03:16 a.m. BST** — The security analyst reviewed the real-time SIEM dashboard metrics, concentrating on isolating the malicious source IP address and identifying the targeted system usernames to confirm containment.  
   
 ### Investigation  
-The security analyst received the authentication alerts and utilized the central console to investigate the live event.  
+The security analyst received the authentication alerts and utilised the central console to investigate the live event.  
   
 The root cause of the incident was identified as an exposed SSH utility service running on standard port 22 with password authentication enabled. This configuration allowed the attacker to run a multi-threaded brute-force utility (Hydra) using known wordlists. The tool automatically flooded the host with rapid credential-stuffing attempts against non-existent accounts.  
   
-After confirming the automated volume, the team analyzed the log data. The logs indicated that the attacker generated a massive vertical spike of hits before dropping the network connection.  
+After confirming the automated volume, the team analysed the log data. The logs indicated that the attacker generated a massive vertical spike of hits before dropping the network connection.  
   
 ### Response and remediation  
 The organization successfully intercepted the attack traffic through the local security pipeline. As the automated tool only generated failed login events, no system breach or credential compromise occurred on the asset.  

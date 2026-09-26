@@ -7,10 +7,10 @@
 
 ---
 
-## Part 1: NIST CSF 2.0 Core Mapping
-The incident lifecycle and infrastructure architecture align directly with the **NIST Cybersecurity Framework (CSF) 2.0** core functions:
+## Part 1: NIST CSF 2.0 Mapping
+The incident lifecycle and infrastructure architecture align directly with the **NIST Cybersecurity Framework (CSF) 2.0** functions:
 
-| NIST CSF Function | Core Activity |
+| NIST CSF Function | Activity |
 | :--- | :--- |
 | **Identify (ID)** | Mapping `**server` as a critical asset and tracking its baseline architecture limitations. |
 | **Protect (PR)** | Moving Docker data to the `/mnt/**_1storageA` RAID 1 array to protect the OS partition from log flooding. |
@@ -31,9 +31,9 @@ The incident lifecycle and infrastructure architecture align directly with the *
 
 ### Phase 2: Analysis
 Expanding the JSON alert data structure on the Wazuh Discover screen revealed the following forensic facts:
-* **Attacker IP (`data.srcip`):** `x.x.x.x` *(Sanitized)*
+* **Attacker IP (`data.srcip`):** `x.x.x.x` *(Sanitised)*
 * **Target Account (`data.dstuser`):** `fakeuser3`
-* **Tactics, Techniques, and Procedures (TTPs):** Automated dictionary attack via port 22 (SSH) utilizing a multi-threaded tool (Hydra) guessing users against the `rockyou.txt` wordlist.
+* **Tactics, Techniques, and Procedures (TTPs):** Automated dictionary attack via port 22 (SSH) utilising a multi-threaded tool (Hydra) guessing users against the `rockyou.txt` wordlist.
 
 ### Phase 3: Containment
 To isolate the threat and stop the automated tool from consuming critical server resources, the following containment strategies were implemented:

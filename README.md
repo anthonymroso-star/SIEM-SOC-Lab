@@ -1,23 +1,23 @@
 # Enterprise SIEM Deployment & Incident Response Lab  
 A practical workshop focused on setting up a professional-grade Security Operations Center (SOC) system using Wazuh software to track, detect, and record simulated real-world cyberattacks.
   
-> **Compliance & Data Sanitization Note:** Where applicable, files, scripts, logs, IP addresses, hostnames, and architecture identities within this repository have been sanitized and anonymized in alignment with relevant security frameworks and responsible-disclosure guidelines.  
+> **Compliance & Data Sanitisation Note:** Where applicable, files, scripts, logs, IP addresses, hostnames, and architecture identities within this repository have been sanitised and anonymised in alignment with relevant security frameworks and responsible-disclosure guidelines.  
 ## Lab Architecture Overview  
-* **Host Endpoint:** Ubuntu Host OS (Simulating a localized corporate production server).  
+* **Host Endpoint:** Ubuntu Host OS (Simulating a localised corporate production server).  
 * **SIEM Central Engine:** Wazuh Indexer & Manager v4.7.5 deployed via Docker Compose.  
 * **Storage Architecture:** Dedicated RAID 1 scratch drive array (`/mnt/**_storage`) isolation for volatile data logging.  
-* **Attacker Asset:** Kali Linux (Utilizing Hydra for multi-threaded dictionary attacks).  
+* **Attacker Asset:** Kali Linux (Utilising Hydra for multi-threaded dictionary attacks).  
   
 ## Key Skills Demonstrated  
 
-| Core Capability | Technical Implementation & Approach |
+| Capability | Technical Implementation & Approach |
 | :--- | :--- |
-| **SIEM Engineering** | Multi-node Docker architecture orchestration, custom volume pathing, and container timezone synchronization. |
+| **SIEM Engineering** | Multi-node Docker architecture orchestration, custom volume pathing, and container timezone synchronisation. |
 | **Endpoint Hardening** | XML configuration modification, operating system definitions and system metrics auditing. |
 | **DFIR** | Digital forensics, Log analysis, Search queries, signature analysis, and NIST CSF 2.0 documentation. |
 | **SIEM & Telemetry** | Tracked SIEM authentication rule triggers generated directly from system logs. |
 | **Framework Alignment** | Mapped active containment and recovery actions directly to NIST CSF 2.0 core functions. |
-| **Incident Response** | Analyzed raw alert JSON data structures to isolate attacker IPs and targeted usernames. |
+| **Incident Response** | Analysed alert JSON data structures to isolate attacker IPs and targeted usernames. |
 | **Threat Mitigation** | Executed manual UFW firewall blocks to immediately drop malicious source network traffic. |
 | **Infrastructure Awareness** | Protected OS disk space by isolating Docker log directories on local RAID storage. |
 | **Technical Communication** | Structured technical forensic findings into professional executive incident reports. |
